@@ -1,124 +1,162 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1e2430;
-    color: #fff;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #1e2430;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  padding: 10px;     
+}
 
-  .player {
-    display: flex;
-    width: 800px;
-    height: 600px;
-    background-color: #2a3142;
-    border-radius: 10px;
-    overflow: hidden;
-  }
+.player {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 900px;  
+  height: auto;
+  background-color: #2a3142;
+  border-radius: 10px;
+  overflow: hidden;
+}
 
-  .playlist {
-    width: 40%;
-    background-color: #232835;
-    overflow-y: auto;
-    display: flex;
-   flex-direction: column;
-   height: 100%;
-  }
+/* Playlist sidebar */
+.playlist {
+  width: 40%;
+  background-color: #232835;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
 
-  .playlist-item {
-   padding: 15px;
+/* Playlist items */
+.playlist-item {
+  padding: 15px;
   display: flex;
   align-items: center;
   cursor: pointer;
   border-bottom: 1px solid #3a4050;
+}
 
-  }
 .playlist-item span {
   margin-left: auto;
 }
-  .playlist-item img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-    border-radius: 5px;
-  }
 
+.playlist-item img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 5px;
+}
 
-  .playlist-item:hover {
-    background-color: #343a4a;
-  }
+.playlist-item:hover {
+  background-color: #343a4a;
+}
 
-  .playlist-item.active {
-    background-color: #3a4050;
-  }
+.playlist-item.active {
+  background-color: #3a4050;
+}
 
-  .now-playing {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
+/* Now Playing section */
+.now-playing {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
 
 .now-playing img {
-  width: 100%;             
-  max-width:400px;
-  height:auto;             
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   border-radius: 10px;
-  margin-bottom: 1.25rem;   
+  margin-bottom: 1.25rem;
   object-fit: cover;
 }
 
-  .song-info {
-    text-align: center;
-    margin-bottom: 20px;
+.song-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.song-info h2 {
+  margin: 0;
+}
+
+.song-info p {
+  margin: 5px 0 0;
+  color: #ccc;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap; 
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.progress {
+  width: 100%;
+  height: 5px;
+  background: #3a4050;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.progress-bar {
+  width: 40%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 5px;
+}
+
+
+@media (max-width: 768px) {
+  .player {
+    flex-direction: column; 
+    max-width: 100%;
+    height: auto;
   }
 
-  .song-info h2 {
-    margin: 0;
+  .playlist {
+    width: 100%;
+    max-height: 250px; 
   }
 
-  .song-info p {
-    margin: 5px 0 0;
-    color: #ccc;
+  .now-playing {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .now-playing img {
+    max-width: 90%;
+    aspect-ratio: 1 / 1; 
   }
 
   .controls {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+    gap: 20px; 
   }
+}
 
+@media (max-width: 480px) {
   .controls button {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
+    font-size: 16px; 
   }
 
-  .progress {
-    width: 100%;
-    height: 5px;
-    background: #3a4050;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    position: relative;
-  }
-
-  .progress-bar {
-    width: 40%;
-    height: 100%;
-    background: #ffffff;
-    border-radius: 5px;
-  }
-
-  @media (max-width: 600px) {
-  .now-playing img {
-    max-width: 90%;         
-    aspect-ratio: 1 / 1;    
+  .playlist-item img {
+    width: 40px;
+    height: 40px;
   }
 }

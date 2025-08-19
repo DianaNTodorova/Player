@@ -16,6 +16,9 @@ const PlaylistItem = ({ artist, song, img, active }: PlaylistItemProps): ReactEl
         <div>{artist}</div>
         <div style={{ fontSize: active ? "inherit" : "12px", color: active ? "inherit" : "#aaa" }}>{song}</div>
       </div>
+      <span className="material-symbols-outlined">
+play_circle
+</span>
     </div>
   );
 };

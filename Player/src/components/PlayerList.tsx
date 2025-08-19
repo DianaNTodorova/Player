@@ -10,7 +10,7 @@ import img7 from "../assets/img7.jpg";
 import img8 from "../assets/img8.jpg";
 
 const playlistData = [
-  { id: 1, artist: "Ludwig van Beethoven", song: "Symphony No. 5", img: img1, active: true },
+  { id: 1, artist: "Ludwig van Beethoven", song: "Symphony No. 5", img: img1 },
   { id: 2, artist: "Wolfgang Amadeus Mozart", song: "Eine kleine Nachtmusik", img: img2 },
   { id: 3, artist: "Johann Sebastian Bach", song: "Toccata and Fugue in D minor", img: img3 },
   { id: 4, artist: "Pyotr Ilyich Tchaikovsky", song: "Swan Lake", img: img4 },

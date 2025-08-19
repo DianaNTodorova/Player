@@ -22,22 +22,29 @@ body {
     width: 40%;
     background-color: #232835;
     overflow-y: auto;
+    display: flex;
+   flex-direction: column;
+   height: 100%;
   }
 
   .playlist-item {
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    border-bottom: 1px solid #3a4050;
-  }
+   padding: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 1px solid #3a4050;
 
+  }
+.playlist-item span {
+  margin-left: auto;
+}
   .playlist-item img {
     width: 50px;
     height: 50px;
     margin-right: 10px;
     border-radius: 5px;
   }
+
 
   .playlist-item:hover {
     background-color: #343a4a;
@@ -82,7 +89,7 @@ body {
   .controls {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
   }
 
   .controls button {
